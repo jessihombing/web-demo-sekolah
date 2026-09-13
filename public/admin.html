@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin SMA Nusantara</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#eef4fb;
+display:flex;
+}
+
+.sidebar{
+width:230px;
+background:#0d6efd;
+height:100vh;
+padding:20px;
+color:white;
+position:fixed;
+}
+
+.sidebar h2{
+margin-bottom:30px;
+}
+
+.sidebar a{
+display:block;
+color:white;
+text-decoration:none;
+padding:12px;
+margin:8px 0;
+border-radius:8px;
+}
+
+.sidebar a:hover{
+background:#084298;
+}
+
+.main{
+margin-left:250px;
+padding:30px;
+width:100%;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:15px;
+margin-bottom:25px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+input,textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+padding:12px 20px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button:hover{
+background:#084298;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table th{
+background:#0d6efd;
+color:white;
+padding:10px;
+}
+
+table td{
+padding:10px;
+border:1px solid #ddd;
+}
+
+.delete{
+background:#dc3545;
+}
+
+.edit{
+background:#ffc107;
+color:black;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>🏫 Admin</h2>
+
+<a href="/">Beranda</a>
+<a href="#">Kelola Berita</a>
+<a href="#">Kelola Profil</a>
+<a href="#">Pesan Masuk</a>
+
+</div>
+
+<div class="main">
+
+<div class="card">
+
+<h2>Tambah Berita</h2>
+
+<form id="beritaForm">
+
+<input type="text" id="judul" placeholder="Judul Berita" required>
+
+<input type="text" id="tanggal" placeholder="Tanggal Berita" required>
+
+<textarea id="isi" rows="5" placeholder="Isi Berita"></textarea>
+
+<button type="submit">Tambah Berita</button>
+
+</form>
+
+</div>
+
+<div class="card">
+
+<h2>Daftar Berita</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Judul</th>
+<th>Tanggal</th>
+<th>Aksi</th>
+</tr>
+</thead>
+
+<tbody id="dataBerita"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
